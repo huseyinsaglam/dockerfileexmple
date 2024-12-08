@@ -37,7 +37,7 @@ pipeline {
         stage('Docker Kubernetes') {
             steps {
                 script{
-                    kubernetesDeploy configs: 'deploymentservice.yaml', kubeconfigId: 'kubernetes']
+                    kubernetesDeploy (configs: 'deploymentservice.yaml', kubeconfigId: 'kubernetes')
                 }
             }
         }
