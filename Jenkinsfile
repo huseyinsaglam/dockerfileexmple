@@ -34,5 +34,13 @@ pipeline {
             }
         }
 
+        stage('Docker Image to DockerHub') {
+            steps {
+                script{
+                    kubernetesDeploy configs: 'deploymentservice.yaml', kubeconfigId: 'kubernetes']
+                }
+            }
+        }
+
     }
 }
