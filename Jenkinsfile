@@ -42,5 +42,13 @@ pipeline {
             }
         }
 
+        stage('Docker Image to Clean') {
+           steps {
+                script{
+                     bat 'docker image prune -f'
+                }
+            }
+        }
+
     }
 }
